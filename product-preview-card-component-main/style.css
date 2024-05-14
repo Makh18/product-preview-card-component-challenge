@@ -1,0 +1,167 @@
+
+:root{
+    --ff-montserrat:"Montserrat", sans-serif;
+    --ff-fraunces: "Fraunces", serif;
+
+    --fw-montserrat-normal:500;
+    --fw-montserrat-bold:700;
+    --fw-fraunces-bold:700;
+
+    --clr-primary-900:hsl(158, 36%, 37%);
+    --clr-primary-700:hsl(30, 38%, 92%);
+    
+    --clr-neutral-blue:hsl(212, 21%, 14%);
+    --clr-neutral-gray:hsl(228, 12%, 48%);
+    --clr-neutral-white:hsl(0, 0%, 100%);
+
+   
+    --fs-900:2.5rem;
+    --fs-700:1.5rem;
+    --fs-500:0.9375rem;
+    --fs-400:0.75rem;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+     font-family: var(--ff-montserrat);
+     font-size: var(--fs-500);
+    background-color:var(--clr-primary-700);
+}
+.container{
+    padding:150px 0;
+}
+.product{
+   
+    max-width: 750px;
+    margin: 0 auto;
+    background-color:var(--clr-neutral-white);
+    display: grid;
+    gap:1rem;
+    border-radius: 0.5rem;
+
+}
+.product__image{
+    object-fit: cover;
+   
+}
+h1{
+  font-family: var(--ff-fraunces);
+  font-weight: var(--fw-fraunces-bold);
+  font-size: var(--fs-900);
+}
+
+.product__details{
+    padding: 1.5rem;
+}
+.product__category{
+ text-transform: uppercase;
+ letter-spacing: 5px;
+}
+.price{
+    font-family: var(--ff-fraunces);
+    font-weight: var(--fw-fraunces-bold);
+    font-size: var(--fs-900);
+    color:var(--clr-primary-900);
+    margin-right: 0.5em;
+}
+.old-price{
+    text-decoration: line-through;
+    display: inline;
+}
+.price__details{
+    margin-bottom: 2em;
+}
+.btn{
+    display: block;
+    background-color: var(--clr-primary-900);
+    border-radius: 8px;
+    padding: 0.75em 0.5em;
+    color: var(--clr-neutral-white);
+    text-align: center;
+    font-weight: var(--fw-montserrat-normal);
+    cursor: pointer;
+    text-decoration: none;
+}
+.icon{
+    display: inline-block;
+    margin-right: 1em;
+}
+
+@media(min-width:800px){
+    .product{
+        grid-template-columns: 1fr 1fr;
+    }
+}
