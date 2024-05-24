@@ -101,7 +101,7 @@ body{
     background-color:var(--clr-primary-700);
 }
 .container{
-    padding:150px 0;
+    padding:100px 0;
 }
 .product{
    
@@ -111,6 +111,7 @@ body{
     display: grid;
     gap:1rem;
     border-radius: 0.5rem;
+   
 
 }
 .product__image{
@@ -121,10 +122,13 @@ h1{
   font-family: var(--ff-fraunces);
   font-weight: var(--fw-fraunces-bold);
   font-size: var(--fs-900);
+  color:var(--clr-neutral-blue);
 }
 
 .product__details{
     padding: 1.5rem;
+    display:grid;
+    gap:1rem
 }
 .product__category{
  text-transform: uppercase;
@@ -141,14 +145,11 @@ h1{
     text-decoration: line-through;
     display: inline;
 }
-.price__details{
-    margin-bottom: 2em;
-}
 .btn{
-    display: block;
+    
     background-color: var(--clr-primary-900);
     border-radius: 8px;
-    padding: 0.75em 0.5em;
+    padding: 0.9em 0.5em;
     color: var(--clr-neutral-white);
     text-align: center;
     font-weight: var(--fw-montserrat-normal);
